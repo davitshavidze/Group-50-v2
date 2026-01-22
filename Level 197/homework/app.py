@@ -1,0 +1,2 @@
+
+# Codewars No.1
