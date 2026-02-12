@@ -1,2 +1,2 @@
 
-# Codewars No.1
+# No Homework - made in next level homework folder dd;

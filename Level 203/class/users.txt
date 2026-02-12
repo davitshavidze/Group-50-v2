@@ -1,0 +1,6 @@
+('dato20@gmail.com', 'dato2020', [])
+('dzukaevi20@gmail.com', 'dzukdzuk20', [])
+('gabrieli@gmail.com', 'gabro2010', [])
+('dato@gmail.com', 'hello123', [])
+('dato90@gmail.com', 'dato1010', [])
+('kvara10@gmail.com', 'kvara1010', [])
