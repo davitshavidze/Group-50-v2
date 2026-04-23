@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
+
+      #child {
+        display: flex;
+        padding: 12px;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 10px;
+        background-color: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="child">
+      <h1>Product Title: <i style="color: blue;">{{ details.title }}</i></h1>
+      <p>Products Description: <i style="color: blue;">{{ details.desc }}</i></p>
+      <p>Products Price: <i style="color: blue;">{{ details.price }}$</i></p>
+      <p>Product Quantity: <i style="color: blue;">{{ details.quantity }}</i></p>
+    </div>
+  </body>
+</html>

@@ -1,49 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    h1 {
-      color: red;
-    }
+      h1 {
+        color: red;
+      }
 
-    p {
-      color: blue;
-      font-weight: 600;
-    }
+      p {
+        color: blue;
+        font-weight: 600;
+      }
 
-    button {
-      border: none;
-      padding: 5px;
-      border-radius: 10px;
-      color: white;
-      background-color: black;
-      transition: 0.3s ease
-    }
+      button {
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        transition: 0.3s ease;
+      }
 
-    button:hover {
-      color: black;
-      background-color: gray;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h1>Home Page</h1>
-  <p>Welcome to Home Page</p>
-  <div>
-    <a href="about"><button>About Page</button></a>
-    <a href="services"><button>Services Page</button></a>
-    <a href="contact"><button>Contact Page</button></a>
-  </div>
-</body>
+      button:hover {
+        color: black;
+        background-color: gray;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Home Page</h1>
+    <p>Welcome to Home Page</p>
+    <div>
+      <a href="about"><button>About Page</button></a>
+      <a href="services"><button>Services Page</button></a>
+      <a href="contact"><button>Contact Page</button></a>
+    </div>
+    <div style="display: flex; gap: 50px;">
+      <table border="2" style="margin-top: 70px; border-collapse: collapse">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>High_role</th>
+            <th>Group_name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for x in students %}
+          <tr>
+            {% for item in x.values %}
+            <td style="padding: 10px; font-size: 18px; font-weight: 600; text-align: center;">{{ item }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <table border="2" style="margin-top: 70px; border-collapse: collapse">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Status</th>
+            <th>Mentor_month</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for x in mentors %}
+          <tr>
+            {% for item in x.values %}
+            <td style="padding: 10px; font-size: 18px; font-weight: 600; text-align: center;">{{ item }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <table border="2" style="margin-top: 70px; border-collapse: collapse">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Group</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for x in assistants %}
+          <tr>
+            {% for item in x.values %}
+            <td style="padding: 10px; font-size: 18px; font-weight: 600; text-align: center;">{{ item }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
