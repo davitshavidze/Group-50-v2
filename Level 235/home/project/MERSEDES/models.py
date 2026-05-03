@@ -6,3 +6,6 @@ class MERSEDES(models.Model):
   desc = models.CharField(max_length=50)
   price = models.CharField(default=0)
   img = models.CharField(default="")
+
+  def __str__(self):
+    return self.title
